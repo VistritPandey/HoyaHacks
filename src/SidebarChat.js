@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import db from "./firebase";
 import "./SidebarChat.css";
+import GroupAddIcon from "@material-ui/icons/GroupAdd";
 
 function SidebarChat({ addNewChat, id, name }) {
   const [seed, setSeed] = useState("");
@@ -15,7 +16,7 @@ function SidebarChat({ addNewChat, id, name }) {
         .collection("messages")
         .orderBy("timestamp", "desc")
         .onSnapshot((snapshot) =>
-        setMessages(snapshot.docs.map((doc) => doc.data()))
+          setMessages(snapshot.docs.map((doc) => doc.data()))
         );
     }
     console.log(messages);
@@ -45,8 +46,8 @@ function SidebarChat({ addNewChat, id, name }) {
       </div>
     </Link>
   ) : (
-    <div className="sidebarChat" onClick={createChat}>
-      <h2>Add new Chat</h2>
+    <div className="" onClick={createChat}>
+      <GroupAddIcon className="addicon" />
     </div>
   );
 }

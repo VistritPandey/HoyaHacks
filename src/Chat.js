@@ -7,11 +7,13 @@ import {
   Mic,
   MoreVert,
   SearchOutlined,
+  VoiceChat,
 } from "@material-ui/icons";
 import { useParams } from "react-router-dom";
 import db from "./firebase";
 import firebase from "firebase";
 import { useStateValue } from "./StateProvider";
+import SendIcon from "@material-ui/icons/Send";
 
 function Chat() {
   const [seed, setSeed] = useState("");
@@ -37,7 +39,6 @@ function Chat() {
           setMessages(snapshot.docs.map((doc) => doc.data()))
         );
     }
-    // console.log(messages);
     return () => {};
   }, [roomId]);
 
@@ -74,7 +75,12 @@ function Chat() {
             <SearchOutlined />
           </IconButton>
           <IconButton>
-            <AttachFile />
+            <a
+              href="https://aqueous-plains-97236.herokuapp.com/"
+              target="_blank"
+            >
+              <VoiceChat />
+            </a>
           </IconButton>
           <IconButton>
             <MoreVert />
@@ -97,19 +103,18 @@ function Chat() {
         ))}
       </div>
       <div className="chat__footer">
-        <InsertEmoticon />
         <form>
           <input
             type="text"
-            placeholder="Type a message"
+            placeholder="Send a message"
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />
           <button type="submit" onClick={sendMessage}>
-            Type a message
+            Send a message
           </button>
         </form>
-        <Mic />
+        <SendIcon onClick={sendMessage} />
       </div>
     </div>
   );
