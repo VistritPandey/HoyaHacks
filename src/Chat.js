@@ -1,14 +1,7 @@
 import { Avatar, IconButton } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import "./Chat.css";
-import {
-  AttachFile,
-  InsertEmoticon,
-  Mic,
-  MoreVert,
-  SearchOutlined,
-  VoiceChat,
-} from "@material-ui/icons";
+import { MoreVert, SearchOutlined } from "@material-ui/icons";
 import { useParams } from "react-router-dom";
 import db from "./firebase";
 import firebase from "firebase";
@@ -53,6 +46,8 @@ function Chat() {
       message: input,
       name: user.displayName,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      credibility: "100%",
+      img: "img",
     });
     setInput("");
   };
@@ -90,6 +85,10 @@ function Chat() {
             {message.message}
             <span className="chat__timestamp">
               {new Date(message.timestamp?.toDate()).toUTCString()}
+            </span>
+            <span className="chat__nm">
+              {" "}
+              Credibility: {message.credibility}
             </span>
           </p>
         ))}

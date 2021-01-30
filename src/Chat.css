@@ -97,3 +97,9 @@
     height: 10px;
     padding-right: 10px;
 }
+
+.chat__nm{
+    top: 35px;
+    font-weight: 700;
+    font-size: small;
+}
