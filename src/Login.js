@@ -25,7 +25,7 @@ function Login() {
     <div className="login">
       <div className="login__container">
         <div className="login__text">
-          <h1>WhatsApp-Clone</h1>
+          <h1>CredNews</h1>
         </div>
 
         <Button onClick={signIn}>

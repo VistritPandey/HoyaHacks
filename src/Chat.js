@@ -64,7 +64,7 @@ function Chat() {
         <div className="chat__headerInfo">
           <h3>{roomName}</h3>
           <p>
-            Last seen at{" "}
+            Last story created at{" "}
             {new Date(
               messages[messages.length - 1]?.timestamp?.toDate()
             ).toUTCString()}
@@ -73,14 +73,6 @@ function Chat() {
         <div className="chat__headerRight">
           <IconButton>
             <SearchOutlined />
-          </IconButton>
-          <IconButton>
-            <a
-              href="https://aqueous-plains-97236.herokuapp.com/"
-              target="_blank"
-            >
-              <VoiceChat />
-            </a>
           </IconButton>
           <IconButton>
             <MoreVert />
@@ -111,7 +103,7 @@ function Chat() {
             onChange={(e) => setInput(e.target.value)}
           />
           <button type="submit" onClick={sendMessage}>
-            Send a message
+            Start a new story
           </button>
         </form>
         <SendIcon onClick={sendMessage} />
