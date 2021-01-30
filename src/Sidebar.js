@@ -36,9 +36,9 @@ function Sidebar() {
           </div>
         </div>
         <div className="sidebar__headerRight">
-          <IconButton>
+          {/*<IconButton>
             <SidebarChat addNewChat />
-          </IconButton>
+          </IconButton>*/}
         </div>
       </div>
 
