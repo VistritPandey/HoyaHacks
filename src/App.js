@@ -2,6 +2,7 @@ import React from "react";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 import "./App.css";
 import Chat from "./Chat";
+import Admin from "./Admin";
 import Login from "./Login";
 import Sidebar from "./Sidebar";
 import { useStateValue } from "./StateProvider";
@@ -19,9 +20,6 @@ function App() {
             <Sidebar />
             <Switch>
               <Route path="/rooms/:roomId">
-                <Chat />
-              </Route>
-              <Route path="/admin">
                 <Chat />
               </Route>
               <Route path="/">
