@@ -3,7 +3,7 @@ import firebase from "firebase";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyA2pi0RiZF3VeU2PIRx1VG9qu8J0J9TRjg",
-  authDomain: "cred-news-admin.firebaseapp.com",
+  authDomain: "cred-news.firebaseapp.com",
   projectId: "cred-news",
   storageBucket: "cred-news.appspot.com",
   messagingSenderId: "220168688339",
