@@ -21,9 +21,11 @@ function App() {
               <Route path="/rooms/:roomId">
                 <Chat />
               </Route>
+              <Route path="/admin">
+                <Chat />
+              </Route>
               <Route path="/">
-                <div className="app__body-emptyChat">
-                </div>
+                <div className="app__body-emptyChat"></div>
               </Route>
             </Switch>
           </BrowserRouter>
