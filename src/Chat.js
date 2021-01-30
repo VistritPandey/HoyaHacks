@@ -46,7 +46,7 @@ function Chat() {
       message: input,
       name: user.displayName,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-      credibility: "100%",
+      credibility: "counting...",
       img: "img",
     });
     setInput("");
@@ -93,7 +93,7 @@ function Chat() {
           </p>
         ))}
       </div>
-      {/*<div className="chat__footer">
+      <div className="chat__footer">
         <form>
           <input
             type="text"
@@ -106,7 +106,7 @@ function Chat() {
           </button>
         </form>
         <SendIcon onClick={sendMessage} />
-      </div>*/}
+      </div>
     </div>
   );
 }
