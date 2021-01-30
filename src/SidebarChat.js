@@ -27,7 +27,7 @@ function SidebarChat({ addNewChat, id, name }) {
   }, []);
 
   const createChat = () => {
-    const roomName = prompt("Please enter name for chat room");
+    const roomName = prompt("Please enter name for new genre");
     if (roomName) {
       db.collection("rooms").add({
         name: roomName,
@@ -41,7 +41,7 @@ function SidebarChat({ addNewChat, id, name }) {
         <Avatar src={`https://avatars.dicebear.com/api/human/${id}.svg`} />
         <div className="sidebarChat__info">
           <h2>{name}</h2>
-          <p>{messages[0]?.message}</p>
+          <p>New story in</p>
         </div>
       </div>
     </Link>
